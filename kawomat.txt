@@ -1,0 +1,48 @@
+a
+duza / wielka / ogromna
+# americano/latte/machiato
+# dodtaki: bez cukru/z bita smietana
+
+print("Jaka kawusie sobie zyczysz?")
+rozmiar = input("rozmiar [Duza/Wialka/Ogromna] ")
+rodzaj = input("rodzaj [Americon/caffe Latte] ")
+dodatki = input("dodatki [Bez cukru/bita Smietana] ")
+
+if rozmiar == "D":
+    cena = 10
+else:
+    if rozmiar == "W":
+        cena = 15
+    else:
+        if rozmiar == "O":
+            cena = 20
+        else:
+            print("Niepoprawny rozmiar")
+            cena = 0
+
+if cena > 0:
+    if rodzaj == "A":
+        cena = cena + 10
+    else:
+        if rodzaj == "L":
+            cena = cena + 15
+        else:
+            print("Niepoprawny rodzaj")
+            cena = 0
+
+if cena > 0:
+    if dodatki == "B":
+        cena = cena + 1000
+    else:
+        if dodatki == "S":
+            cena = cena + 10
+        else:
+            print("Niepoprawny dodatki")
+            cena = 0
+
+if cena > 0:
+    print("Cena: " + str(cena) + " zlociszy")
+else:
+    print("Cos zle wpisano :/")
+
+
